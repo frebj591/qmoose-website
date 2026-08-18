@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QMoose Interactive | Next-Gen Indie Games</title>
+    <title>QMoose Interactive | Indie Game Studio & Apps</title>
     <style>
         :root {
             --bg-color: #0d0f12;
@@ -30,7 +30,7 @@
         }
 
         header {
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem 2rem 1rem;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
             background: radial-gradient(circle at top, #1a2332 0%, var(--bg-color) 70%);
@@ -49,7 +49,7 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-main);
-            padding: 0.3rem 0.6rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.85rem;
@@ -121,6 +121,28 @@
             margin-bottom: 1rem;
         }
 
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section h3 {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .section h4 {
+            color: var(--accent-color);
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.05rem;
+        }
+
         p {
             color: var(--text-muted);
             margin-bottom: 1rem;
@@ -143,21 +165,6 @@
             box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
         }
 
-        .section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .section h3 {
-            color: var(--text-main);
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
-
         footer {
             text-align: center;
             padding: 2rem;
@@ -171,7 +178,7 @@
             text-decoration: none;
         }
 
-        /* Dölj / Visa språksektioner */
+        /* Språkhantering */
         .lang-en { display: none; }
         .lang-sv { display: block; }
 
@@ -187,60 +194,81 @@
             <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
         </div>
         <div class="logo">QMoose Interactive</div>
-        <div class="tagline">Indie Game Studio & Innovation</div>
+        <div class="tagline">Indie Game Studio & Digital Products</div>
     </header>
 
     <div class="container">
         <!-- HERO CARD -->
         <div class="hero-card">
-            <!-- Svenska -->
+            <!-- SVENSKA -->
             <div class="lang-sv">
-                <span class="badge">Kommer Snart till Google Play</span>
-                <h2>Ett nytt äventyr tar form</h2>
-                <p>Vi arbetar för fullt med vårt kommande mobilspel. Håll utkik här för lansering, nyheter och uppdateringar!</p>
+                <span class="badge">Officiell Hemsida</span>
+                <h2>Smidiga & engagerande digitala upplevelser</h2>
+                <p>QMoose Interactive utvecklar mobilspel och applikationer med fokus på prestanda, integritet och användarupplevelse.</p>
                 <a href="#contact" class="btn">Kontakta Oss</a>
             </div>
-            <!-- Engelska -->
+            <!-- ENGELSKA -->
             <div class="lang-en">
-                <span class="badge">Coming Soon to Google Play</span>
-                <h2>A new adventure is shaping up</h2>
-                <p>We are hard at work developing our upcoming mobile game. Stay tuned for news, updates, and release!</p>
+                <span class="badge">Official Website</span>
+                <h2>Engaging Digital Experiences & Mobile Games</h2>
+                <p>QMoose Interactive develops mobile games and applications focused on performance, privacy, and great user experiences.</p>
                 <a href="#contact" class="btn">Contact Us</a>
             </div>
         </div>
 
-        <!-- PRIVACY POLICY -->
+        <!-- INTEGRITETSPOLICY / PRIVACY POLICY -->
         <div class="section" id="privacy">
-            <!-- Svenska -->
+            <!-- SVENSKA -->
             <div class="lang-sv">
-                <h3>Integritetspolicy (Privacy Policy)</h3>
+                <h3>Integritetspolicy</h3>
                 <p><strong>Senast uppdaterad:</strong> Augusti 2026</p>
-                <p>QMoose Interactive värnar om din personliga integritet. Våra appar och spel är utformade för att samla in så lite data som möjligt.</p>
-                <p><strong>Ingen datainsamling:</strong> Spelet <strong>QMoose Arrow Escape</strong> körs helt offline och samlar inte in, lagrar inte och delar inte någon personlig information, enhetsidentifierare eller platsdata.</p>
-                <p><strong>Inga annonser eller spårning:</strong> Spelet innehåller inga tredjepartsannonser, spårningsverktyg eller köp i appen.</p>
+                <p>QMoose Interactive värnar om din personliga integritet. Denna policy beskriver hur vi hanterar information i alla våra mobilapplikationer och spel som publiceras av QMoose Interactive.</p>
+
+                <h4>1. Datainsamling och användning</h4>
+                <p>Vi strävar efter strikt dataminimering. De flesta av våra appar och spel är utformade för att fungera helt utan insamling av personligt identifierbar information. Om en app samlar in data (t.ex. vid användning av molnsparning, lederkort eller kraschrapporter) sker detta i syfte att tillhandahålla och förbättra tjänstens funktioner.</p>
+
+                <h4>2. Tredjepartstjänster och annonser</h4>
+                <p>Vissa av våra applikationer kan använda sig av betrodda tredjepartstjänster för att möjliggöra funktioner såsom plattformstjänster (Google Play Services), annonsering eller anonym prestanda- och kraschanalys. Eventuell datatransaktion behandlas säkert och i enlighet med gällande dataskyddsförordningar (GDPR).</p>
+
+                <h4>3. Barns integritet</h4>
+                <p>Våra produkter är utformade för att följa gällande lagstiftning om barns onlineintegritet (COPPA och GDPR). Vi samlar inte medvetet in personlig information från barn.</p>
+
+                <h4>4. Ändringar och kontakt</h4>
+                <p>Denna policy kan komma att uppdateras i takt med att vi lanserar nya produkter eller funktioner. Den senaste versionen finns alltid tillgänglig på denna sida.</p>
             </div>
-            <!-- Engelska -->
+
+            <!-- ENGELSKA -->
             <div class="lang-en">
                 <h3>Privacy Policy</h3>
                 <p><strong>Last updated:</strong> August 2026</p>
-                <p>QMoose Interactive respects your privacy. Our applications and games are designed with privacy in mind.</p>
-                <p><strong>No Data Collection:</strong> The game <strong>QMoose Arrow Escape</strong> operates completely offline and does not collect, store, or share any personal data, device identifiers, or location data.</p>
-                <p><strong>No Ads or Tracking:</strong> The application contains no third-party advertisements, tracking tools, or in-app purchases.</p>
+                <p>QMoose Interactive respects your privacy. This policy outlines how information is handled across all mobile applications and games published by QMoose Interactive.</p>
+
+                <h4>1. Data Collection & Usage</h4>
+                <p>We prioritize data minimization. Most of our applications and games are designed to function without collecting any personally identifiable information. If an application collects data (e.g., for cloud saves, leaderboards, or crash reports), it is done solely to provide and improve product features.</p>
+
+                <h4>2. Third-Party Services & Ads</h4>
+                <p>Some applications may utilize trusted third-party services for functionality such as Google Play Services, advertising, or anonymous crash analytics. Any data processed by third parties is handled securely in compliance with privacy regulations (GDPR/COPPA).</p>
+
+                <h4>3. Children's Privacy</h4>
+                <p>Our applications comply with global children's privacy regulations (including COPPA and GDPR). We do not knowingly collect personal data from children.</p>
+
+                <h4>4. Updates & Contact</h4>
+                <p>This Privacy Policy may be updated periodically to reflect new features or products. The latest version will always be accessible via this page.</p>
             </div>
         </div>
 
         <!-- SUPPORT & KONTAKT -->
         <div class="section" id="contact">
-            <!-- Svenska -->
+            <!-- SVENSKA -->
             <div class="lang-sv">
                 <h3>Support & Kontakt</h3>
-                <p>Har du frågor, idéer eller behöver du support för någon av våra produkter?</p>
+                <p>Har du frågor om våra appar, teknisk support eller förslag på förbättringar?</p>
                 <p>E-post: <a href="mailto:frebj591@gmail.com">frebj591@gmail.com</a></p>
             </div>
-            <!-- Engelska -->
+            <!-- ENGELSKA -->
             <div class="lang-en">
                 <h3>Support & Contact</h3>
-                <p>Do you have any questions, feedback, or need support for any of our products?</p>
+                <p>Do you have any questions regarding our products, need technical support, or want to provide feedback?</p>
                 <p>Email: <a href="mailto:frebj591@gmail.com">frebj591@gmail.com</a></p>
             </div>
         </div>
