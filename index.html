@@ -34,6 +34,31 @@
             text-align: center;
             border-bottom: 1px solid var(--border-color);
             background: radial-gradient(circle at top, #1a2332 0%, var(--bg-color) 70%);
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .lang-btn.active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
         }
 
         .logo {
@@ -52,7 +77,7 @@
             margin-top: 0.5rem;
         }
 
-        container {
+        .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
@@ -98,7 +123,7 @@
 
         p {
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .btn {
@@ -110,6 +135,7 @@
             border-radius: 8px;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 0.5rem;
         }
 
         .btn:hover {
@@ -144,40 +170,99 @@
             color: var(--accent-color);
             text-decoration: none;
         }
+
+        /* Dölj / Visa språksektioner */
+        .lang-en { display: none; }
+        .lang-sv { display: block; }
+
+        body.show-en .lang-sv { display: none; }
+        body.show-en .lang-en { display: block; }
     </style>
 </head>
 <body>
 
     <header>
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-sv" onclick="setLang('sv')">SV</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
         <div class="logo">QMoose Interactive</div>
         <div class="tagline">Indie Game Studio & Innovation</div>
     </header>
 
-    <container>
+    <div class="container">
+        <!-- HERO CARD -->
         <div class="hero-card">
-            <span class="badge">Kommer Snart till Google Play</span>
-            <h2>Ett nytt äventyr tar form</h2>
-            <p>Vi arbetar för fullt med vårt kommande mobilspel. Håll utkik här för lansering, nyheter och uppdateringar!</p>
-            <a href="#contact" class="btn">Kontakta Oss</a>
+            <!-- Svenska -->
+            <div class="lang-sv">
+                <span class="badge">Kommer Snart till Google Play</span>
+                <h2>Ett nytt äventyr tar form</h2>
+                <p>Vi arbetar för fullt med vårt kommande mobilspel. Håll utkik här för lansering, nyheter och uppdateringar!</p>
+                <a href="#contact" class="btn">Kontakta Oss</a>
+            </div>
+            <!-- Engelska -->
+            <div class="lang-en">
+                <span class="badge">Coming Soon to Google Play</span>
+                <h2>A new adventure is shaping up</h2>
+                <p>We are hard at work developing our upcoming mobile game. Stay tuned for news, updates, and release!</p>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
         </div>
 
+        <!-- PRIVACY POLICY -->
         <div class="section" id="privacy">
-            <h3>Integritetspolicy (Privacy Policy)</h3>
-            <p><strong>Senast uppdaterad:</strong> Augusti 2026</p>
-            <p>QMoose Interactive värnar om din personliga integritet. Våra appar och spel är utformade för att samla in så lite data som möjligt.</p>
-            <p>Vi samlar inte in någon personligt identifierbar information utan ditt uttryckliga medgivande. Eventuell anonym användningsdata som samlas in syftar enbart till att förbättra spelupplevelsen och åtgärda eventuella krascher.</p>
+            <!-- Svenska -->
+            <div class="lang-sv">
+                <h3>Integritetspolicy (Privacy Policy)</h3>
+                <p><strong>Senast uppdaterad:</strong> Augusti 2026</p>
+                <p>QMoose Interactive värnar om din personliga integritet. Våra appar och spel är utformade för att samla in så lite data som möjligt.</p>
+                <p><strong>Ingen datainsamling:</strong> Spelet <strong>QMoose Arrow Escape</strong> körs helt offline och samlar inte in, lagrar inte och delar inte någon personlig information, enhetsidentifierare eller platsdata.</p>
+                <p><strong>Inga annonser eller spårning:</strong> Spelet innehåller inga tredjepartsannonser, spårningsverktyg eller köp i appen.</p>
+            </div>
+            <!-- Engelska -->
+            <div class="lang-en">
+                <h3>Privacy Policy</h3>
+                <p><strong>Last updated:</strong> August 2026</p>
+                <p>QMoose Interactive respects your privacy. Our applications and games are designed with privacy in mind.</p>
+                <p><strong>No Data Collection:</strong> The game <strong>QMoose Arrow Escape</strong> operates completely offline and does not collect, store, or share any personal data, device identifiers, or location data.</p>
+                <p><strong>No Ads or Tracking:</strong> The application contains no third-party advertisements, tracking tools, or in-app purchases.</p>
+            </div>
         </div>
 
+        <!-- SUPPORT & KONTAKT -->
         <div class="section" id="contact">
-            <h3>Support & Kontakt</h3>
-            <p>Har du frågor, idéer eller behöver du support för någon av våra produkter?</p>
-            <p>E-post: <a href="mailto:frebj591@gmail.com">frebj591@gmail.com</a></p>
+            <!-- Svenska -->
+            <div class="lang-sv">
+                <h3>Support & Kontakt</h3>
+                <p>Har du frågor, idéer eller behöver du support för någon av våra produkter?</p>
+                <p>E-post: <a href="mailto:frebj591@gmail.com">frebj591@gmail.com</a></p>
+            </div>
+            <!-- Engelska -->
+            <div class="lang-en">
+                <h3>Support & Contact</h3>
+                <p>Do you have any questions, feedback, or need support for any of our products?</p>
+                <p>Email: <a href="mailto:frebj591@gmail.com">frebj591@gmail.com</a></p>
+            </div>
         </div>
-    </container>
+    </div>
 
     <footer>
         &copy; 2026 QMoose Interactive. Alla rättigheter förbehållna.
     </footer>
+
+    <script>
+        function setLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('show-en');
+                document.getElementById('btn-en').classList.add('active');
+                document.getElementById('btn-sv').classList.remove('active');
+            } else {
+                document.body.classList.remove('show-en');
+                document.getElementById('btn-sv').classList.add('active');
+                document.getElementById('btn-en').classList.remove('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
